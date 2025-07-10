@@ -41,8 +41,8 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Location de Pianos à Queue Premium</h1>
-      <p>Découvrez l'élégance et la sophistication des pianos à queue de classe mondiale pour vos événements spéciaux
+      <h1>Location de Pianos à Queue</h1>
+      <p>Vous avez un
       </p>
       <a href="#contact" class="cta-button">Réservez Votre Piano Aujourd'hui</a>
     </div>
@@ -93,7 +93,37 @@
       <h2>Notre Collection de Pianos à Queue</h2>
       <div class="piano-grid">
         <div class="piano-card">
-          <div class="piano-image">♪</div>
+          <div class="piano-card">
+            <div class="piano-slideshow">
+              <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide active">
+                  <img src="../assets/piano1/piano1_1.jpg" alt="Steinway Model D - Front View"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+                <div class="slide">
+                  <img src="../assets/piano1/piano1_2.jpg" alt="Steinway Model D - Side View"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+                <div class="slide">
+                  <img src="../assets/piano1/piano1_3.jpg" alt="Steinway Model D - Interior"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="prev" onclick="changeSlide(this, -1)">❮</button>
+                <button class="next" onclick="changeSlide(this, 1)">❯</button>
+
+                <!-- Dots indicators -->
+                <div class="dots-container">
+                  <span class="dot active" onclick="currentSlide(this, 1)"></span>
+                  <span class="dot" onclick="currentSlide(this, 2)"></span>
+                  <span class="dot" onclick="currentSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="piano-info">
             <h3>Steinway Modèle D</h3>
             <p>Le piano à queue de concert ultime, offrant une qualité sonore et un toucher inégalés. Parfait pour les
@@ -102,7 +132,28 @@
           </div>
         </div>
         <div class="piano-card">
-          <div class="piano-image">♫</div>
+          <div class="piano-card">
+            <div class="piano-slideshow">
+              <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide active">
+                  <img src="../assets/unavailable.png" alt="Steinway Model D - Front View"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+                <!-- Navigation arrows -->
+                <button class="prev" onclick="changeSlide(this, -1)">❮</button>
+                <button class="next" onclick="changeSlide(this, 1)">❯</button>
+
+                <!-- Dots indicators -->
+                <div class="dots-container">
+                  <span class="dot active" onclick="currentSlide(this, 1)"></span>
+                  <span class="dot" onclick="currentSlide(this, 2)"></span>
+                  <span class="dot" onclick="currentSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="piano-info">
             <h3>Yamaha CFX</h3>
             <p>Un chef-d'œuvre moderne avec un son brillant et une gamme dynamique exceptionnelle. Idéal pour les
@@ -111,7 +162,29 @@
           </div>
         </div>
         <div class="piano-card">
-          <div class="piano-image">♪</div>
+          <div class="piano-card">
+            <div class="piano-slideshow">
+              <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide active">
+                  <img src="../assets/unavailable.png" alt="Steinway Model D - Front View"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="prev" onclick="changeSlide(this, -1)">❮</button>
+                <button class="next" onclick="changeSlide(this, 1)">❯</button>
+
+                <!-- Dots indicators -->
+                <div class="dots-container">
+                  <span class="dot active" onclick="currentSlide(this, 1)"></span>
+                  <span class="dot" onclick="currentSlide(this, 2)"></span>
+                  <span class="dot" onclick="currentSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="piano-info">
             <h3>Bösendorfer 280VC</h3>
             <p>L'artisanat autrichien à son meilleur, connu pour son ton riche et chaleureux et son clavier étendu.
@@ -120,7 +193,29 @@
           </div>
         </div>
         <div class="piano-card">
-          <div class="piano-image">♫</div>
+          <div class="piano-card">
+            <div class="piano-slideshow">
+              <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide active">
+                  <img src="../assets/unavailable.png" alt="Steinway Model D - Front View"
+                    onerror="this.parentNode.innerHTML='<div class=&quot;piano-placeholder&quot;>♪</div>'">
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="prev" onclick="changeSlide(this, -1)">❮</button>
+                <button class="next" onclick="changeSlide(this, 1)">❯</button>
+
+                <!-- Dots indicators -->
+                <div class="dots-container">
+                  <span class="dot active" onclick="currentSlide(this, 1)"></span>
+                  <span class="dot" onclick="currentSlide(this, 2)"></span>
+                  <span class="dot" onclick="currentSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="piano-info">
             <h3>Fazioli F308</h3>
             <p>Excellence italienne avec une clarté et une puissance extraordinaires. Le choix des pianistes exigeants
@@ -271,6 +366,73 @@
 
       card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  </script>
+
+  <script>
+    // Slideshow functionality
+    function changeSlide(button, direction) {
+      const slideshow = button.closest('.slideshow-container');
+      const slides = slideshow.querySelectorAll('.slide');
+      const dots = slideshow.querySelectorAll('.dot');
+      let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+      // Remove active class from current slide and dot
+      slides[currentIndex].classList.remove('active');
+      dots[currentIndex].classList.remove('active');
+
+      // Calculate new index
+      currentIndex += direction;
+      if (currentIndex >= slides.length) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = slides.length - 1;
+
+      // Add active class to new slide and dot
+      slides[currentIndex].classList.add('active');
+      dots[currentIndex].classList.add('active');
+    }
+
+    function currentSlide(dot, slideNumber) {
+      const slideshow = dot.closest('.slideshow-container');
+      const slides = slideshow.querySelectorAll('.slide');
+      const dots = slideshow.querySelectorAll('.dot');
+
+      // Remove active class from all slides and dots
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+
+      // Add active class to selected slide and dot
+      slides[slideNumber - 1].classList.add('active');
+      dots[slideNumber - 1].classList.add('active');
+    }
+
+    // Auto-slideshow (optional)
+    function autoSlide() {
+      const slideshows = document.querySelectorAll('.slideshow-container');
+
+      slideshows.forEach(slideshow => {
+        const nextButton = slideshow.querySelector('.next');
+        if (nextButton) {
+          changeSlide(nextButton, 1);
+        }
+      });
+    }
+
+    // Uncomment the next line to enable auto-slideshow every 5 seconds
+    // setInterval(autoSlide, 5000);
+
+    // Image loading handler
+    document.addEventListener('DOMContentLoaded', function () {
+      const images = document.querySelectorAll('.slide img');
+
+      images.forEach(img => {
+        if (img.complete) {
+          img.classList.add('loaded');
+        } else {
+          img.onload = function () {
+            this.classList.add('loaded');
+          };
+        }
       });
     });
   </script>
